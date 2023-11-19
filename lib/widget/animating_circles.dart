@@ -66,15 +66,15 @@ class CirclePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Paint paint = Paint()
-      ..color = Colors.grey[100]!
-      ..style = PaintingStyle.fill;
-
-    final Paint paint1 = Paint()
       ..color = Colors.grey[200]!
       ..style = PaintingStyle.fill;
 
+    final Paint paint1 = Paint()
+      ..color = Colors.grey[400]!
+      ..style = PaintingStyle.fill;
+
     final Paint paint2 = Paint()
-      ..color = Colors.grey[300]!
+      ..color = Colors.grey[600]!
       ..style = PaintingStyle.fill;
 
     final center = Offset(size.width / 2, size.height / 2);
