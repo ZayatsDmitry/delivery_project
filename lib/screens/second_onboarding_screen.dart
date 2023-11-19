@@ -10,16 +10,16 @@ class SecondOnBoardingScreen extends StatefulWidget {
 
 class _SecondOnBoardingScreenState extends State<SecondOnBoardingScreen>
     with SingleTickerProviderStateMixin {
-  late AnimationController _conroller;
+  late AnimationController _controller;
 
   @override
   void initState() {
     super.initState();
-    _conroller = AnimationController(
+    _controller = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 3),
     );
-    _conroller.repeat(reverse: true);
+    _controller.repeat(reverse: true);
   }
 
   @override
@@ -38,10 +38,10 @@ class _SecondOnBoardingScreenState extends State<SecondOnBoardingScreen>
               children: [
                 const AnimatingCircles(),
                 AnimatedBuilder(
-                animation: _conroller,
+                animation: _controller,
                 builder: (BuildContext context, Widget? child) {
                   return Transform.translate(
-                    offset: Offset(0, _conroller.value * -50),
+                    offset: Offset(0, _controller.value * -50),
                     child: Image.asset(
                       "assets/character-2.png",
                       width: 200,
